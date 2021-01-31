@@ -5,7 +5,7 @@ cluster_name: 'mzcluster'  # Same as in hosts.ini
 cluster_master: 'mzmaster.sb' # Same as in hosts.ini
 
 # Kubernetes
-kube_version: v1.19.0
+kube_version: v1.20.2
 token: b0f7b8.8d1767876297d85c
 
 # 1.8.x feature: --feature-gates SelfHosting=true
@@ -24,7 +24,7 @@ network: flannel
 
 # Change this to an appropriate interface, preferably a private network.
 # Default is 'eth0'.  
-network_interface: "eth0"
+network_interface: "ens5"
 ansible_interface_param: 'ansible_{{network_interface}}'
 kubemaster_ip: '{{ hostvars[cluster_master][ansible_interface_param].ipv4.address }}'
 

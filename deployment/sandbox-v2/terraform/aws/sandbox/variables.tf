@@ -1,9 +1,9 @@
 variable "sandbox_name" { //Change this to your sandbox name.
-  default = "qa"  // This is informational.  A tag will be added with this name.
+  default = "development"  // This is informational.  A tag will be added with this name.
 }
 
 variable "region" {
-  default = "ap-south-1"
+  default = "ap-southeast-1"
 }
 
 variable "vpc_cidr" {
@@ -16,7 +16,7 @@ variable "private_subnet" {
 
 /* CentOS 7.8 image from AWS */
 variable "install_image" {
-  default = "ami-0dd861ee19fd50a16"
+  default = "ami-07f65177cb990d65b"
 }
 
 /* 4 CPU, 16 GB */
@@ -28,7 +28,7 @@ variable "private_key" {
   type = map(string)
   default = {
     "name" = "mosip-aws"  // Name as given while creating keys on AWS console 
-    "local_path" = "~/.ssh/mosip-aws.pem" // Location on the machine from where you are running terraform
+    "local_path" = "/Users/phyominhtun/Documents/mosip-sandbox/mosip-infra/deployment/sandbox-v2/terraform/aws/sandbox/keys/mosip-aws.pem" // Location on the machine from where you are running terraform
   } 
 }
 
@@ -46,11 +46,6 @@ variable "kube_names" {
      "mzworker1.sb",
      "mzworker2.sb",
      "mzworker3.sb",
-     "mzworker4.sb",
-     "mzworker5.sb",
-     "mzworker6.sb",
-     "mzworker7.sb",
-     "mzworker8.sb",
      "dmzmaster.sb",
      "dmzworker0.sb"
    ]

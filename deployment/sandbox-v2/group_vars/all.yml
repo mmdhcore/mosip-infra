@@ -10,7 +10,7 @@ charts_root: '{{install_root}}/helm/charts'  # Helm charts root
 helm_cli_path: '{{user_home}}/bin'  # This path chosen as it is included in default $PATH in Centos 7.7
 artifactory_url: http://15.207.222.178
 
-sandbox_domain_name: minibox.mosip.net
+sandbox_domain_name: dev.mmdh-mosip.net
 site:
   sandbox_public_url: 'https://{{sandbox_domain_name}}'
   ssl:
@@ -27,7 +27,7 @@ clusters:
   mz:
     kube_config:  "{{lookup('env', 'HOME') }}/.kube/mzcluster.config" 
     nodeport_node: mzworker0.sb  # Any node on cluster for nodeport access
-    any_node_ip: '10.20.20.157' # ip address of above node
+    any_node_ip: '10.20.20.229' # ip address of above node
     ingress:
       namespace: ingress-nginx
       nodeports:
@@ -59,7 +59,7 @@ clusters:
   dmz:
     kube_config:  "{{lookup('env', 'HOME') }}/.kube/dmzcluster.config" 
     nodeport_node: dmzworker0.sb  # Any node on cluster for nodeport access
-    any_node_ip: '10.20.20.207' # ip adddress of above node
+    any_node_ip: '10.20.20.66' # ip adddress of above node
     ingress:
       namespace: ingress-nginx
       nodeports:
