@@ -177,7 +177,7 @@ databases:
     sql_path: '{{repos.regproc.dest}}/db_scripts'
   mosip_ida:
     sql_path: '{{repos.ida.dest}}/db_scripts'
-  mosip_pmp:
+  mosip_pms:
     sql_path: '{{repos.pms.dest}}/db_scripts'
 
 nfs:
