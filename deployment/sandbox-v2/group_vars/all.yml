@@ -13,7 +13,7 @@ artifactory_url: http://artifactory-service/
 versions_file: '{{install_root}}/versions.yml' 
 podconfig_file: '{{install_root}}/podconfig.yml'
 
-sandbox_domain_name: minibox.mosip.net
+sandbox_domain_name: dev.exmaple.com
 internal_domain_name: '{{ansible_host}}'  # IP address of console
 site:
   sandbox_public_url: 'https://{{sandbox_domain_name}}'  # The public url needs to point to nginx on console
@@ -21,7 +21,7 @@ site:
   sandbox_internal_tld: 'sb'  # Top-level domain name.  This much match tld of all hosts in hosts.ini
   ingress_tld: 'ingress'  # Fixed. Don't change this!
   ssl:
-    ca: 'letsencrypt'   # The ca to be used in this deployment
+    ca: 'selfsigned'   # The ca to be used in this deployment
 
 # Paths of various supported ssl certs
 ssl:

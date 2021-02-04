@@ -1,9 +1,9 @@
 variable "sandbox_name" { //Change this to your sandbox name.
-  default = "qa"  // This is informational.  A tag will be added with this name.
+  default = "development"  // This is informational.  A tag will be added with this name.
 }
 
 variable "region" {
-  default = "ap-south-1"
+  default = "ap-southeast-1"
 }
 
 variable "vpc_cidr" {
@@ -16,7 +16,7 @@ variable "private_subnet" {
 
 /* CentOS 7.8 image from AWS */
 variable "install_image" {
-  default = "ami-0dd861ee19fd50a16"
+  default = "ami-07f65177cb990d65b" // CentOS-7 AMI (Singapore Region)
 }
 
 /* 4 CPU, 16 GB */
@@ -50,11 +50,6 @@ variable "kube_names" {
      "mzworker1.sb": "10.20.20.101",
      "mzworker2.sb": "10.20.20.102",
      "mzworker3.sb": "10.20.20.103",
-     "mzworker4.sb": "10.20.20.104",
-     "mzworker5.sb": "10.20.20.105",
-     "mzworker6.sb": "10.20.20.106",
-     "mzworker7.sb": "10.20.20.107",
-     "mzworker8.sb": "10.20.20.108",
      "dmzmaster.sb": "10.20.20.199",
      "dmzworker0.sb": "10.20.20.200"
    }
